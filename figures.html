@@ -7,7 +7,63 @@
     <title>Geometric Figures | Practical JS</title>
   </head>
   <body>
-    <h1>Geometric Figures</h1>
     <script src="./figures.js"></script>
+    <header>
+      <h1>Geometric Figures</h1>
+      <p>This is the first workshop of the Practical JS Course.</p>
+    </header>
+    <section>
+      <h2>Find the area and perimeter of a square</h2>
+      <form action="">
+        <label for="squareInput">
+          Write how long each side of your square is:
+        </label>
+        <input id="squareInput" type="number" />
+        <button type="button" onclick="findSquarePerimeter()">
+          Find the perimeter
+        </button>
+        <button type="button" onclick="findSquareArea()">Find the area</button>
+      </form>
+    </section>
+    <section>
+      <h2>Find the area and perimeter of a triangle</h2>
+      <form action="">
+        <h3>Perimeter</h3>
+        <p>Write how long each side of your triangle are:</p>
+        <label for="triangleInput1"> Side #1: </label>
+        <input id="triangleInput1" type="number" />
+        <label for="triangleInput2"> Side #2: </label>
+        <input id="triangleInput2" type="number" />
+        <label for="triangleInput3"> Side #3: </label>
+        <input id="triangleInput3" type="number" />
+        <button type="button" onclick="findTrianglePerimeter()">
+          Find the perimeter
+        </button>
+      </form>
+      <form action="">
+        <h3>Area</h3>
+        <p>Write the measurements of the triangle's base and height:</p>
+        <label for="triangleBase"> Triangle's base: </label>
+        <input id="triangleBase" type="number" />
+        <label for="triangleHeight"> Triangle's height: </label>
+        <input id="triangleHeight" type="number" />
+        <button type="button" onclick="findTriangleArea()">
+          Find the area
+        </button>
+      </form>
+    </section>
+    <section>
+      <h2>Find the area and perimeter of a circle</h2>
+      <form action="">
+        <label for="circleInput">
+          Write the measure of the circle's radius:
+        </label>
+        <input id="circleInput" type="number" />
+        <button type="button" onclick="findCircunference()">
+          Find the circunference
+        </button>
+        <button type="button" onclick="findCircleArea()">Find the area</button>
+      </form>
+    </section>
   </body>
 </html>

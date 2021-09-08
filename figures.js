@@ -47,3 +47,59 @@ function circleArea(radius) {
 }
 
 console.groupEnd();
+
+// Here we interact with HTML
+
+// Square JS functions
+function findSquarePerimeter() {
+  const input = document.getElementById("squareInput");
+  const value = input.value;
+
+  const perimeter = squarePerimeter(value);
+  alert(perimeter);
+}
+function findSquareArea() {
+  const input = document.getElementById("squareInput");
+  const value = input.value;
+
+  const area = squareArea(value);
+  alert(area);
+}
+
+// Triangle JS Functions
+function findTrianglePerimeter() {
+  const input1 = document.getElementById("triangleInput1");
+  const value1 = Number(input1.value);
+  const input2 = document.getElementById("triangleInput2");
+  const value2 = Number(input2.value);
+  const input3 = document.getElementById("triangleInput3");
+  const value3 = Number(input3.value);
+
+  const perimeter = trianglePerimeter(value1, value2, value3);
+  alert(perimeter);
+}
+function findTriangleArea() {
+  const base = document.getElementById("triangleBase");
+  const value1 = base.value;
+  const height = document.getElementById("triangleHeight");
+  const value2 = height.value;
+
+  const area = triangleArea(value1, value2);
+  alert(area);
+}
+
+// Circle JS Functions
+function findCircunference() {
+  const radius = document.getElementById("circleInput");
+  const value = radius.value;
+
+  const circunference = circlePerimeter(value);
+  alert(circunference);
+}
+function findCircleArea() {
+  const radius = document.getElementById("circleInput");
+  const value = radius.value;
+
+  const area = circleArea(value);
+  alert(area);
+}

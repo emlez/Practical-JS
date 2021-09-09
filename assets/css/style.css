@@ -44,23 +44,25 @@ header {
 header img {
   width: 25rem;
 }
+main,
 .accordionWrapper {
-  padding: 5rem 1rem;
+  padding: 3rem 1rem 2rem;
   border-radius: 3rem;
   background: white;
   float: left;
   width: 100%;
 }
-.accordionItem {
+main .accordionItem {
   float: left;
   display: block;
   width: 100%;
 }
-.accordionItem-heading:hover {
+main .accordionItem-heading:hover,
+.accordionItem-heading:active {
   background-color: var(--tiffany-blue);
   color: var(--sherpa-blue);
 }
-.accordionItem-heading {
+main .accordionItem-heading {
   cursor: pointer;
   padding: 1.8rem;
   background-color: var(--sherpa-blue);
@@ -68,15 +70,21 @@ header img {
   width: 100%;
   border-radius: 1rem;
   margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.close .accordionItem-content {
+/* main .close + .accordionItem-heading {
+ I want something to change the icon from expanded to contracted.
+} */
+main .close .accordionItem-content {
   height: 0px;
-  transition: height 1s ease-out;
+  transition: height 0.5s ease-out;
   transform: scaleY(0);
   float: left;
   display: block;
 }
-.open .accordionItem-content {
+main .open .accordionItem-content {
   padding: 1rem;
   width: 100%;
   /* margin: 0px 0px 10px 0px; */
@@ -89,11 +97,19 @@ header img {
   border-radius: 1rem;
   margin: 1rem 0;
 }
-h3,
+main .accordionItem-content > h3 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+main .accordionItem-content > h3 > span {
+  padding-right: 0.5rem;
+}
+main h3,
 h4 {
   color: var(--sherpa-blue);
 }
-button {
+main .accordionItem button {
   cursor: pointer;
   padding: 1.5rem;
   border: none;
@@ -101,18 +117,14 @@ button {
   color: white;
   font-family: "Space Mono", monospace;
   font-size: 1.6rem;
-  width: 350px;
+  width: 100%;
   border-radius: 1rem;
   margin-bottom: 0.5rem;
 }
-.accordionItem-content button:hover {
+main .accordionItem-content button:hover {
   background-color: var(--tiffany-blue);
   color: var(--sherpa-blue);
 }
-/* main .main-input {
-  width: 70vw;
-  margin: 1rem 0;
-} */
 main .welcome-h1 {
   text-align: center;
 }
@@ -125,7 +137,7 @@ main .main-input {
 }
 main .main-input-container {
   margin: 1rem 0;
-  width: 350px;
+  width: 100%;
   border-radius: 1rem;
   background-color: var(--black-squeeze);
   display: flex;

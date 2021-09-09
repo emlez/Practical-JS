@@ -15,6 +15,10 @@
       href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <script src="./assets/js/index.js"></script>
 
@@ -31,10 +35,17 @@
         Welcome to <b>Calc</b> 🧮 <br />
         What would you like to calculate?
       </p>
-      <section class="accordionItem open">
-        <h2 class="accordionItem-heading">Geometric Figures</h2>
+      <section class="accordionItem close">
+        <h2 class="accordionItem-heading">
+          <span class="material-icons">category</span>
+          Geometric Figures
+          <span class="material-icons">expand_more</span>
+        </h2>
         <section class="accordionItem-content">
-          <h3>Square</h3>
+          <h3>
+            <span class="material-icons">crop_square</span>
+            Square
+          </h3>
           <form action="">
             <label for="squareInput">
               How long is each side of your square?
@@ -59,7 +70,10 @@
           </form>
         </section>
         <section class="accordionItem-content">
-          <h3>Triangle</h3>
+          <h3>
+            <span class="material-icons">change_history</span>
+            Triangle
+          </h3>
           <form action="">
             <h4>Perimeter</h4>
             <p>Write how long each side of your triangle are:</p>
@@ -136,12 +150,20 @@
           </form>
         </section>
         <section class="accordionItem-content">
-          <h3>Circle</h3>
+          <h3>
+            <span class="material-icons">circle</span>
+            Circle
+          </h3>
           <form action="">
             <label for="circleInput"> Circle's radius: </label>
             <section class="main-input">
               <div class="main-input-container">
-                <input id="circleInput" type="number" placeholder="0" />
+                <input
+                  id="circleInput"
+                  type="number"
+                  placeholder="0"
+                  required
+                />
                 <select class="select" name="option">
                   <option value="1" selected>cm</option>
                   <option value="2">km</option>
@@ -160,7 +182,11 @@
         </section>
       </section>
       <section class="accordionItem close">
-        <h2 class="accordionItem-heading">Next Challenge</h2>
+        <h2 class="accordionItem-heading">
+          <span class="material-icons">quiz</span>
+          Next Challenge
+          <span class="material-icons">expand_more</span>
+        </h2>
         <section class="accordionItem-content">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque,
@@ -171,7 +197,11 @@
         </section>
       </section>
       <section class="accordionItem close">
-        <h2 class="accordionItem-heading">Next Challenge</h2>
+        <h2 class="accordionItem-heading">
+          <span class="material-icons">quiz</span>
+          Next Challenge
+          <span class="material-icons">expand_more</span>
+        </h2>
         <section class="accordionItem-content">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque,
@@ -182,7 +212,11 @@
         </section>
       </section>
       <section class="accordionItem close">
-        <h2 class="accordionItem-heading">Next Challenge</h2>
+        <h2 class="accordionItem-heading">
+          <span class="material-icons">quiz</span>
+          Next Challenge
+          <span class="material-icons">expand_more</span>
+        </h2>
         <section class="accordionItem-content">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque,

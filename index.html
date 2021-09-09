@@ -24,112 +24,187 @@
     <header>
       <img src="https://i.postimg.cc/tgPBmYzQ/calc-logo.png" alt="Calc Logo" />
     </header>
-    <main>
-      <div class="accordionWrapper">
-        <section class="accordionItem open">
-          <h2 class="accordionItem-heading">Geometric Figures</h2>
-          <section class="accordionItem-content">
-            <h3>Square</h3>
-            <form action="">
-              <label for="squareInput">
-                How long is each side of your square?
-              </label>
-              <input id="squareInput" type="number" />
-              <button type="button" onclick="findSquarePerimeter()">
-                Find the perimeter
-              </button>
-              <button type="button" onclick="findSquareArea()">
-                Find the area
-              </button>
-            </form>
-          </section>
-          <section class="accordionItem-content">
-            <h3>Find the area and perimeter of a triangle</h3>
-            <form action="">
-              <h4>Perimeter</h4>
-              <p>Write how long each side of your triangle are:</p>
-              <label for="triangleInput1"> Side #1: </label>
-              <input id="triangleInput1" type="number" />
-              <label for="triangleInput2"> Side #2: </label>
-              <input id="triangleInput2" type="number" />
-              <label for="triangleInput3"> Side #3: </label>
-              <input id="triangleInput3" type="number" />
-              <button type="button" onclick="findTrianglePerimeter()">
-                Find the perimeter
-              </button>
-            </form>
-            <form action="">
-              <h4>Area</h4>
-              <p>Write the measurements of the triangle's base and height:</p>
-              <label for="triangleBase"> Triangle's base: </label>
-              <input id="triangleBase" type="number" />
-              <label for="triangleHeight"> Triangle's height: </label>
-              <input id="triangleHeight" type="number" />
-              <button type="button" onclick="findTriangleArea()">
-                Find the area
-              </button>
-            </form>
-          </section>
-          <section class="accordionItem-content">
-            <h3>Find the area and perimeter of a circle</h3>
-            <form action="">
-              <label for="circleInput">
-                Write the measure of the circle's radius:
-              </label>
-              <input id="circleInput" type="number" />
-              <button type="button" onclick="findCircunference()">
-                Find the circunference
-              </button>
-              <button type="button" onclick="findCircleArea()">
-                Find the area
-              </button>
-            </form>
-          </section>
+    <main class="accordionWrapper">
+      <!-- <div class="accordionWrapper"> -->
+      <h1 class="welcome-h1">Hi, there 👋🏼</h1>
+      <p class="welcome-p">
+        Welcome to <b>Calc</b> 🧮 <br />
+        What would you like to calculate?
+      </p>
+      <section class="accordionItem open">
+        <h2 class="accordionItem-heading">Geometric Figures</h2>
+        <section class="accordionItem-content">
+          <h3>Square</h3>
+          <form action="">
+            <label for="squareInput">
+              How long is each side of your square?
+            </label>
+            <section class="main-input">
+              <div class="main-input-container">
+                <input id="squareInput" type="number" placeholder="0" />
+                <select class="select" name="option">
+                  <option value="1" selected>cm</option>
+                  <option value="2">km</option>
+                  <option value="3">in</option>
+                  <option value="4">ft</option>
+                </select>
+              </div>
+            </section>
+            <button type="button" onclick="findSquarePerimeter()">
+              Get the perimeter
+            </button>
+            <button type="button" onclick="findSquareArea()">
+              Get the area
+            </button>
+          </form>
         </section>
-        <section class="accordionItem close">
-          <h2 class="accordionItem-heading">Next Challenge</h2>
-          <section class="accordionItem-content">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque,
-              aspernatur quis laborum laboriosam nulla iusto eligendi incidunt
-              voluptas similique debitis, fuga sunt dicta facilis repudiandae.
-              Fugiat adipisci dignissimos delectus ducimus?
-            </p>
-          </section>
+        <section class="accordionItem-content">
+          <h3>Triangle</h3>
+          <form action="">
+            <h4>Perimeter</h4>
+            <p>Write how long each side of your triangle are:</p>
+            <label for="triangleInput1"> Side #1: </label>
+            <section class="main-input">
+              <div class="main-input-container">
+                <input id="triangleInput1" type="number" placeholder="0" />
+                <select class="select" name="option">
+                  <option value="1" selected>cm</option>
+                  <option value="2">km</option>
+                  <option value="3">in</option>
+                  <option value="4">ft</option>
+                </select>
+              </div>
+            </section>
+            <label for="triangleInput2"> Side #2: </label>
+            <section class="main-input">
+              <div class="main-input-container">
+                <input id="triangleInput2" type="number" placeholder="0" />
+                <select class="select" name="option">
+                  <option value="1" selected>cm</option>
+                  <option value="2">km</option>
+                  <option value="3">in</option>
+                  <option value="4">ft</option>
+                </select>
+              </div>
+            </section>
+            <label for="triangleInput3"> Side #3: </label>
+            <section class="main-input">
+              <div class="main-input-container">
+                <input id="triangleInput3" type="number" placeholder="0" />
+                <select class="select" name="option">
+                  <option value="1" selected>cm</option>
+                  <option value="2">km</option>
+                  <option value="3">in</option>
+                  <option value="4">ft</option>
+                </select>
+              </div>
+            </section>
+            <button type="button" onclick="findTrianglePerimeter()">
+              Get the perimeter
+            </button>
+          </form>
+          <form action="">
+            <h4>Area</h4>
+            <!-- <p>Write the measures of the triangle's base and height:</p> -->
+            <label for="triangleBase"> Triangle's base: </label>
+            <section class="main-input">
+              <div class="main-input-container">
+                <input id="triangleBase" type="number" placeholder="0" />
+                <select class="select" name="option">
+                  <option value="1" selected>cm</option>
+                  <option value="2">km</option>
+                  <option value="3">in</option>
+                  <option value="4">ft</option>
+                </select>
+              </div>
+            </section>
+            <label for="triangleHeight"> Triangle's height: </label>
+            <section class="main-input">
+              <div class="main-input-container">
+                <input id="triangleHeight" type="number" placeholder="0" />
+                <select class="select" name="option">
+                  <option value="1" selected>cm</option>
+                  <option value="2">km</option>
+                  <option value="3">in</option>
+                  <option value="4">ft</option>
+                </select>
+              </div>
+            </section>
+            <button type="button" onclick="findTriangleArea()">
+              Get the area
+            </button>
+          </form>
         </section>
-        <section class="accordionItem close">
-          <h2 class="accordionItem-heading">Next Challenge</h2>
-          <section class="accordionItem-content">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque,
-              aspernatur quis laborum laboriosam nulla iusto eligendi incidunt
-              voluptas similique debitis, fuga sunt dicta facilis repudiandae.
-              Fugiat adipisci dignissimos delectus ducimus?
-            </p>
-          </section>
+        <section class="accordionItem-content">
+          <h3>Circle</h3>
+          <form action="">
+            <label for="circleInput"> Circle's radius: </label>
+            <section class="main-input">
+              <div class="main-input-container">
+                <input id="circleInput" type="number" placeholder="0" />
+                <select class="select" name="option">
+                  <option value="1" selected>cm</option>
+                  <option value="2">km</option>
+                  <option value="3">in</option>
+                  <option value="4">ft</option>
+                </select>
+              </div>
+            </section>
+            <button type="button" onclick="findCircunference()">
+              Get the circunference
+            </button>
+            <button type="button" onclick="findCircleArea()">
+              Get the area
+            </button>
+          </form>
         </section>
-        <section class="accordionItem close">
-          <h2 class="accordionItem-heading">Next Challenge</h2>
-          <section class="accordionItem-content">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque,
-              aspernatur quis laborum laboriosam nulla iusto eligendi incidunt
-              voluptas similique debitis, fuga sunt dicta facilis repudiandae.
-              Fugiat adipisci dignissimos delectus ducimus?
-            </p>
-          </section>
+      </section>
+      <section class="accordionItem close">
+        <h2 class="accordionItem-heading">Next Challenge</h2>
+        <section class="accordionItem-content">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque,
+            aspernatur quis laborum laboriosam nulla iusto eligendi incidunt
+            voluptas similique debitis, fuga sunt dicta facilis repudiandae.
+            Fugiat adipisci dignissimos delectus ducimus?
+          </p>
         </section>
-      </div>
+      </section>
+      <section class="accordionItem close">
+        <h2 class="accordionItem-heading">Next Challenge</h2>
+        <section class="accordionItem-content">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque,
+            aspernatur quis laborum laboriosam nulla iusto eligendi incidunt
+            voluptas similique debitis, fuga sunt dicta facilis repudiandae.
+            Fugiat adipisci dignissimos delectus ducimus?
+          </p>
+        </section>
+      </section>
+      <section class="accordionItem close">
+        <h2 class="accordionItem-heading">Next Challenge</h2>
+        <section class="accordionItem-content">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque,
+            aspernatur quis laborum laboriosam nulla iusto eligendi incidunt
+            voluptas similique debitis, fuga sunt dicta facilis repudiandae.
+            Fugiat adipisci dignissimos delectus ducimus?
+          </p>
+        </section>
+      </section>
+      <!-- </div> -->
     </main>
     <footer>
-      <div class="attributionSection">
+      <p class="attributionSection">
         Challenge by
         <a
           href="https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX"
           target="_blank"
-          >Frontend Mentor</a
-        >. 💻 with 💜 by <a href="https://github.com/emlez">em/ez 🔰</a>.
-      </div>
+        >
+          Frontend Mentor
+        </a>
+      </p>
+      <p>💻 with 💜 by <a href="https://github.com/emlez">em/ez 🔰</a></p>
     </footer>
     <script>
       // Accordion Functionality.

@@ -35,6 +35,17 @@ function trianglePerimeter(side1, side2, base) {
 function triangleArea(base, height) {
   return (base * height) / 2;
 }
+// Code for Isoceles Triangle
+function isocelesTriangleHeight(side1, side2, base) {
+  if (side1 === side2 && side1 != base) {
+    const height = Math.sqrt(side1 * side1 - (base / 2) * (base / 2));
+    console.log(height);
+  } else {
+    console.log(false);
+  }
+}
+
+isocelesTriangleHeight(4, 4, 3);
 
 // Triangle HTML to JS Functions
 function findTrianglePerimeter() {

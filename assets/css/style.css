@@ -1,3 +1,21 @@
+/*
+Adding styles:
+1. Positioning --> static, absolute, relative, fixed.
+2. Box model --> margin, border, padding, content.
+3. Typography --> tipos, tamaños de fuente, etc.
+4. Visual styles --> box-shadow, border-radius, gradient, etc.
+5. Miscellaneous --> CSS rules & more.
+*/
+/* Initial Setup */
+/* Names of the color given by color picker app (Sip) */
+:root {
+  --tiffany-blue: hsl(172, 67%, 45%);
+  --sherpa-blue: hsl(183, 100%, 15%);
+  --breaker-bay: hsl(186, 14%, 43%);
+  --sea-nymph: hsl(184, 14%, 56%);
+  --onahau: hsl(185, 41%, 84%);
+  --black-squeeze: hsl(189, 41%, 97%);
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,10 +23,75 @@
 }
 html {
   font-size: 62.5%;
+  min-width: 375px;
+  scroll-behavior: smooth;
+  background-color: var(--onahau);
 }
 body {
-  font-size: 1.3rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+  font-family: "Space Mono", monospace;
+}
+/* Header */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15rem;
+  width: 100%;
+}
+header img {
+  width: 25rem;
+}
+/* Body */
+.accordionWrapper {
+  padding: 5rem 1rem;
+  border-radius: 1rem;
+  background: #fff;
+  float: left;
+  width: 100%;
+  box-shadow: 0 1.5em 85px 0 rgba(0, 0, 0, 0.2);
+}
+.accordionItem {
+  float: left;
+  display: block;
+  width: 100%;
+}
+.accordionItem-heading:hover {
+  background-color: var(--tiffany-blue);
+  color: var(--sherpa-blue);
+}
+.accordionItem-heading {
+  cursor: pointer;
+  padding: 1.8rem;
+  background-color: var(--sherpa-blue);
+  color: white;
+  width: 100%;
+  border-radius: 1rem;
+  margin-bottom: 0.5rem;
+}
+.close .accordionItem-content {
+  height: 0px;
+  transition: height 1s ease-out;
+  transform: scaleY(0);
+  float: left;
+  display: block;
+}
+.open .accordionItem-content {
+  padding: 20px;
+  width: 100%;
+  margin: 0px 0px 10px 0px;
+  display: block;
+  transform: scaleY(1);
+  transform-origin: top;
+  transition: transform 0.4s ease;
+  box-sizing: border-box;
+}
+.open .accordionItem-heading {
+  margin: 0px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
 }
 
 /* Footer */

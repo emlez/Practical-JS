@@ -1,0 +1,57 @@
+body {
+  background: linear-gradient(to right, #25c481, #25b7c4);
+}
+.accordionWrapper {
+  padding: 30px;
+  background: #fff;
+  float: left;
+  width: 80%;
+  box-sizing: border-box;
+  margin: 10%;
+  box-shadow: 0 1.5em 85px 0 rgba(0, 0, 0, 0.2);
+}
+.accordionItem {
+  float: left;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "Open-sans", Arial, sans-serif;
+}
+.accordionItemHeading {
+  cursor: pointer;
+  margin: 0px 0px 10px 0px;
+  padding: 10px;
+  background: #2980b9;
+  color: #fff;
+  width: 100%;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+.close .accordionItemContent {
+  height: 0px;
+  transition: height 1s ease-out;
+  transform: scaleY(0);
+  float: left;
+  display: block;
+}
+.open .accordionItemContent {
+  padding: 20px;
+  border: 1px solid #ddd;
+  width: 100%;
+  margin: 0px 0px 10px 0px;
+  display: block;
+  transform: scaleY(1);
+  transform-origin: top;
+  transition: transform 0.4s ease;
+  box-sizing: border-box;
+}
+
+.open .accordionItemHeading {
+  margin: 0px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  background-color: #bdc3c7;
+  color: #7f8c8d;
+}

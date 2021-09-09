@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./accordion.css" />
+    <title>Accordion</title>
+  </head>
+  <body>
+    <div class="accordionWrapper">
+      <div class="accordionItem open">
+        <h2 class="accordionItemHeading">About accordions</h2>
+        <div class="accordionItemContent">
+          <p>
+            JavaScript accordions let you squeeze a lot of content into a small
+            space in a Web page.
+          </p>
+          <p>
+            This simple accordion degrades gracefully in browsers that don't
+            support JavaScript or CSS.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordionItem close">
+        <h2 class="accordionItemHeading">Accordion items</h2>
+        <div class="accordionItemContent">
+          <p>
+            A JavaScript accordion is made up of a number of
+            expandable/collapsible items. Only one item is ever shown at a time.
+          </p>
+          <p>
+            You can include any content you want inside an accordion item.
+            Here's a bullet list:
+          </p>
+          <ul>
+            <li>List item #1</li>
+            <li>List item #2</li>
+            <li>List item #3</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordionItem close">
+        <h2 class="accordionItemHeading">How to use a JavaScript accordion</h2>
+        <div class="accordionItemContent">
+          <p>
+            Click an accordion item's heading to expand it. To collapse the
+            item, click it again, or click another item heading.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      var accItem = document.getElementsByClassName("accordionItem");
+      var accHD = document.getElementsByClassName("accordionItemHeading");
+      for (i = 0; i < accHD.length; i++) {
+        accHD[i].addEventListener("click", toggleItem, false);
+      }
+      function toggleItem() {
+        var itemClass = this.parentNode.className;
+        for (i = 0; i < accItem.length; i++) {
+          accItem[i].className = "accordionItem close";
+        }
+        if (itemClass == "accordionItem close") {
+          this.parentNode.className = "accordionItem open";
+        }
+      }
+    </script>
+  </body>
+</html>

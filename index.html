@@ -9,81 +9,117 @@
       rel="icon"
       href="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="./assets/js/index.js"></script>
 
     <title>Practical JS Course</title>
   </head>
   <body>
-    <script src="./assets/js/index.js"></script>
     <header>
-      <nav>
-        <div></div>
-        <div></div>
-        <div></div>
-      </nav>
+      <img src="https://i.postimg.cc/tgPBmYzQ/calc-logo.png" alt="Calc Logo" />
     </header>
     <main>
-      <section class="geometry">
-        <h2>Geometric Figures</h2>
-        <p>This is the first workshop of the Practical JS Course.</p>
-        <section class="squareSection">
-          <h3>Find the area and perimeter of a square</h3>
-          <form action="">
-            <label for="squareInput">
-              Write how long each side of your square is:
-            </label>
-            <input id="squareInput" type="number" />
-            <button type="button" onclick="findSquarePerimeter()">
-              Find the perimeter
-            </button>
-            <button type="button" onclick="findSquareArea()">
-              Find the area
-            </button>
-          </form>
+      <div class="accordionWrapper">
+        <section class="accordionItem open">
+          <h2 class="accordionItem-heading">Geometric Figures</h2>
+          <section class="accordionItem-content">
+            <h3>Square</h3>
+            <form action="">
+              <label for="squareInput">
+                How long is each side of your square?
+              </label>
+              <input id="squareInput" type="number" />
+              <button type="button" onclick="findSquarePerimeter()">
+                Find the perimeter
+              </button>
+              <button type="button" onclick="findSquareArea()">
+                Find the area
+              </button>
+            </form>
+          </section>
+          <section class="accordionItem-content">
+            <h3>Find the area and perimeter of a triangle</h3>
+            <form action="">
+              <h4>Perimeter</h4>
+              <p>Write how long each side of your triangle are:</p>
+              <label for="triangleInput1"> Side #1: </label>
+              <input id="triangleInput1" type="number" />
+              <label for="triangleInput2"> Side #2: </label>
+              <input id="triangleInput2" type="number" />
+              <label for="triangleInput3"> Side #3: </label>
+              <input id="triangleInput3" type="number" />
+              <button type="button" onclick="findTrianglePerimeter()">
+                Find the perimeter
+              </button>
+            </form>
+            <form action="">
+              <h4>Area</h4>
+              <p>Write the measurements of the triangle's base and height:</p>
+              <label for="triangleBase"> Triangle's base: </label>
+              <input id="triangleBase" type="number" />
+              <label for="triangleHeight"> Triangle's height: </label>
+              <input id="triangleHeight" type="number" />
+              <button type="button" onclick="findTriangleArea()">
+                Find the area
+              </button>
+            </form>
+          </section>
+          <section class="accordionItem-content">
+            <h3>Find the area and perimeter of a circle</h3>
+            <form action="">
+              <label for="circleInput">
+                Write the measure of the circle's radius:
+              </label>
+              <input id="circleInput" type="number" />
+              <button type="button" onclick="findCircunference()">
+                Find the circunference
+              </button>
+              <button type="button" onclick="findCircleArea()">
+                Find the area
+              </button>
+            </form>
+          </section>
         </section>
-        <section class="triangleSection">
-          <h3>Find the area and perimeter of a triangle</h3>
-          <form action="">
-            <h4>Perimeter</h4>
-            <p>Write how long each side of your triangle are:</p>
-            <label for="triangleInput1"> Side #1: </label>
-            <input id="triangleInput1" type="number" />
-            <label for="triangleInput2"> Side #2: </label>
-            <input id="triangleInput2" type="number" />
-            <label for="triangleInput3"> Side #3: </label>
-            <input id="triangleInput3" type="number" />
-            <button type="button" onclick="findTrianglePerimeter()">
-              Find the perimeter
-            </button>
-          </form>
-          <form action="">
-            <h4>Area</h4>
-            <p>Write the measurements of the triangle's base and height:</p>
-            <label for="triangleBase"> Triangle's base: </label>
-            <input id="triangleBase" type="number" />
-            <label for="triangleHeight"> Triangle's height: </label>
-            <input id="triangleHeight" type="number" />
-            <button type="button" onclick="findTriangleArea()">
-              Find the area
-            </button>
-          </form>
+        <section class="accordionItem close">
+          <h2 class="accordionItem-heading">Next Challenge</h2>
+          <section class="accordionItem-content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque,
+              aspernatur quis laborum laboriosam nulla iusto eligendi incidunt
+              voluptas similique debitis, fuga sunt dicta facilis repudiandae.
+              Fugiat adipisci dignissimos delectus ducimus?
+            </p>
+          </section>
         </section>
-        <section class="circleSection">
-          <h3>Find the area and perimeter of a circle</h3>
-          <form action="">
-            <label for="circleInput">
-              Write the measure of the circle's radius:
-            </label>
-            <input id="circleInput" type="number" />
-            <button type="button" onclick="findCircunference()">
-              Find the circunference
-            </button>
-            <button type="button" onclick="findCircleArea()">
-              Find the area
-            </button>
-          </form>
+        <section class="accordionItem close">
+          <h2 class="accordionItem-heading">Next Challenge</h2>
+          <section class="accordionItem-content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque,
+              aspernatur quis laborum laboriosam nulla iusto eligendi incidunt
+              voluptas similique debitis, fuga sunt dicta facilis repudiandae.
+              Fugiat adipisci dignissimos delectus ducimus?
+            </p>
+          </section>
         </section>
-      </section>
+        <section class="accordionItem close">
+          <h2 class="accordionItem-heading">Next Challenge</h2>
+          <section class="accordionItem-content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque,
+              aspernatur quis laborum laboriosam nulla iusto eligendi incidunt
+              voluptas similique debitis, fuga sunt dicta facilis repudiandae.
+              Fugiat adipisci dignissimos delectus ducimus?
+            </p>
+          </section>
+        </section>
+      </div>
     </main>
     <footer>
       <div class="attributionSection">
@@ -95,5 +131,22 @@
         >. 💻 with 💜 by <a href="https://github.com/emlez">em/ez 🔰</a>.
       </div>
     </footer>
+    <script>
+      // Accordion Functionality.
+      var accItem = document.getElementsByClassName("accordionItem");
+      var accHD = document.getElementsByClassName("accordionItem-heading");
+      for (i = 0; i < accHD.length; i++) {
+        accHD[i].addEventListener("click", toggleItem, false);
+      }
+      function toggleItem() {
+        var itemClass = this.parentNode.className;
+        for (i = 0; i < accItem.length; i++) {
+          accItem[i].className = "accordionItem close";
+        }
+        if (itemClass == "accordionItem close") {
+          this.parentNode.className = "accordionItem open";
+        }
+      }
+    </script>
   </body>
 </html>

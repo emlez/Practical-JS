@@ -6,6 +6,8 @@ Practical JavaScript is a series of projects by [Platzi's JavaScript School](htt
 
 1. First Workshop: Geometric Figures 🟨 🟡
 
+[Here you can try it for yourself](https://emlez.github.io/Practical-JS/).
+
 ---
 
 💻 with 💜 by [emlez](https://github.com/emlez) 🔰

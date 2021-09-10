@@ -20,6 +20,10 @@ const coupons = [
     name: "minus20",
     discountValue: 20,
   },
+  {
+    name: "free",
+    discountValue: 100,
+  },
 ];
 
 // Checks if user has a coupon
@@ -51,21 +55,7 @@ function doYouHaveACoupon() {
   }
 }
 
-// Original priceDiscounted Function
-// function priceDiscounted() {
-//   let priceGiven = document.getElementById("priceInput");
-//   let priceValue = priceGiven.value;
-
-//   let discountGiven = document.getElementById("discountInput");
-//   let discountValue = discountGiven.value;
-
-//   let priceWithDiscount = calculatePriceWithDiscount(
-//     priceValue,
-//     discountValue
-//   );
-//   let resultPrice = document.getElementById("resultPrice");
-//   resultPrice.innerText = `The price with discount is: $${priceWithDiscount}`;
-// }
+// Discounted Price Function
 function priceDiscounted() {
   // Brings the coupon paragraph to check you've pressed the first button.
   let couponAlert = document.getElementById("couponAlert");
@@ -88,26 +78,39 @@ function priceDiscounted() {
     discount != 0 &&
     couponAlert.innerText === "Continue"
   ) {
-    // Is the coupon valid?
+    // When it's a coupon.
     if (inputType.type == "text") {
       let isCouponValueValid = function (coupon) {
         return coupon.name === discount;
       };
       // Find user coupon in array of coupons.
       let userCoupon = coupons.find(isCouponValueValid);
-
+      //If user's coupon is not in array.
       if (!userCoupon) {
         alert(`The coupon ${discount} is not valid`);
       } else {
+        // User's coupon is valid.
         discount = userCoupon.discountValue;
         let priceWithDiscount = calculatePriceWithDiscount(price, discount);
-        resultPrice.innerText = `The price with discount is: $${priceWithDiscount}`;
+        if (discount == 100) {
+          resultPrice.innerText = `The price with discount is: $${priceWithDiscount}
+          You're a wizard, Harry`;
+        } else {
+          resultPrice.innerText = `The price with discount is: $${priceWithDiscount}`;
+        }
       }
     } else {
+      // When it's a valid discount.
       let priceWithDiscount = calculatePriceWithDiscount(price, discount);
-      resultPrice.innerText = `The price with discount is: $${priceWithDiscount}`;
+      if (price == discount) {
+        resultPrice.innerText = `The price with discount is: $${priceWithDiscount}
+        But, you already knew that... right?!`;
+      } else {
+        resultPrice.innerText = `The price with discount is: $${priceWithDiscount}`;
+      }
     }
   } else if (price && discount && price != 0 && discount != 0) {
+    // Coupon or discount are not selected.
     resultPrice.innerText = "Pick whether you have a coupon or just a discount";
   } else if (price != 0 && discount == 0) {
     resultPrice.innerText = "Enter a valid discount";

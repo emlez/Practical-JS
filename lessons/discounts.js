@@ -88,8 +88,8 @@ function priceDiscounted() {
     discount != 0 &&
     couponAlert.innerText === "Continue"
   ) {
-    if ((inputType.type = "text")) {
-      // Is the coupon valid? Function.
+    // Is the coupon valid?
+    if (inputType.type == "text") {
       let isCouponValueValid = function (coupon) {
         return coupon.name === discount;
       };

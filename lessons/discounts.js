@@ -105,6 +105,8 @@ function priceDiscounted() {
       if (price == discount) {
         resultPrice.innerText = `The price with discount is: $${priceWithDiscount}
         But, you already knew that... right?!`;
+      } else if (price < discount) {
+        resultPrice.innerText = `I don't think that's how it works...`;
       } else {
         resultPrice.innerText = `The price with discount is: $${priceWithDiscount}`;
       }

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      sizes="192x192"
+      href="//static.platzi.com/media/favicons/platzi_favicon.png"
+    />
+    <title>Percentages & Discounts | Practical JS</title>
+  </head>
+  <body>
+    <header>
+      <h1>Percentages & Discounts</h1>
+      <p>This is the second workshop from the Practical JS course.</p>
+    </header>
+    <section>
+      <h2>Calculate the real price with discount applied.</h2>
+      <form>
+        <p>Do you have a coupon?</p>
+        <input type="checkbox" id="yesCoupon" />
+        <label for="yesCoupon">Yes, I have a secret coupon</label><br />
+        <input type="checkbox" id="noCoupon" />
+        <label for="noCoupon">No, coupon who?</label><br />
+        <button type="button" onclick="doYouHaveACoupon()">
+          Confirm your choice
+        </button>
+        <p id="couponAlert"></p>
+        <br /><br />
+
+        <label for="priceInput">Write the price of your product:</label>
+        <input id="priceInput" type="number" /><br />
+        <label for="discountInput" id="couponOrDiscount">
+          Write the discount on your product:
+        </label>
+        <input id="discountInput" type="number" /><br />
+        <button type="button" onclick="priceDiscounted()">
+          Calculate price with discount
+        </button>
+        <p id="resultPrice"></p>
+      </form>
+    </section>
+    <script src="./discounts.js"></script>
+  </body>
+</html>

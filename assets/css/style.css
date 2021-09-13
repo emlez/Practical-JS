@@ -166,6 +166,43 @@ main .main-input-container:hover {
   border-color: #dfe1e500;
 }
 
+/* Percentages & Discounts */
+main .coupon-paragraph {
+  margin: 1rem 0;
+}
+main .coupon-button,
+.coupon-discount {
+  margin-top: 1rem;
+}
+main .discount {
+  display: block;
+}
+main .promptClose {
+  height: 0px;
+  transition: height 0.5s ease-out;
+  transform: scaleY(0);
+  float: left;
+  display: block;
+}
+main .promptOpen {
+  padding: 1.5rem;
+  width: 100%;
+  transform: scaleY(1);
+  transform-origin: top;
+  transition: transform 0.4s ease;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  text-align: center;
+  background-color: var(--sherpa-blue);
+  color: var(--tiffany-blue);
+
+  height: auto;
+}
+main button {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* Footer */
 footer {
   /* display: flex;

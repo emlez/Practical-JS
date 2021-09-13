@@ -29,7 +29,6 @@
       <img src="https://i.postimg.cc/tgPBmYzQ/calc-logo.png" alt="Calc Logo" />
     </header>
     <main class="accordionWrapper">
-      <!-- <div class="accordionWrapper"> -->
       <h1 class="welcome-h1">Hi, there 👋🏼</h1>
       <p class="welcome-p">
         Welcome to <b>Calc</b> 🧮 <br />
@@ -63,9 +62,11 @@
             </section>
             <button type="button" onclick="findSquarePerimeter()">
               Get the perimeter
+              <span class="material-icons"> touch_app </span>
             </button>
             <button type="button" onclick="findSquareArea()">
               Get the area
+              <span class="material-icons"> touch_app </span>
             </button>
           </form>
         </section>
@@ -115,11 +116,11 @@
             </section>
             <button type="button" onclick="findTrianglePerimeter()">
               Get the perimeter
+              <span class="material-icons"> touch_app </span>
             </button>
           </form>
           <form action="">
             <h4>Area</h4>
-            <!-- <p>Write the measures of the triangle's base and height:</p> -->
             <label for="triangleBase"> Triangle's base: </label>
             <section class="main-input">
               <div class="main-input-container">
@@ -146,6 +147,7 @@
             </section>
             <button type="button" onclick="findTriangleArea()">
               Get the area
+              <span class="material-icons"> touch_app </span>
             </button>
           </form>
         </section>
@@ -174,26 +176,67 @@
             </section>
             <button type="button" onclick="findCircunference()">
               Get the circunference
+              <span class="material-icons"> touch_app </span>
             </button>
             <button type="button" onclick="findCircleArea()">
               Get the area
+              <span class="material-icons"> touch_app </span>
             </button>
           </form>
         </section>
       </section>
       <section class="accordionItem close">
         <h2 class="accordionItem-heading">
-          <span class="material-icons">quiz</span>
-          Next Challenge
+          <span class="material-icons">local_offer</span>
+          Discounts
           <span class="material-icons">expand_more</span>
         </h2>
         <section class="accordionItem-content">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque,
-            aspernatur quis laborum laboriosam nulla iusto eligendi incidunt
-            voluptas similique debitis, fuga sunt dicta facilis repudiandae.
-            Fugiat adipisci dignissimos delectus ducimus?
-          </p>
+          <h3>Calculate a product with discount applied</h3>
+          <form>
+            <p class="coupon-paragraph">Do you have a coupon?</p>
+            <input type="checkbox" id="yesCoupon" />
+            <label for="yesCoupon">Yes, I have a secret coupon</label><br />
+            <input type="checkbox" id="noCoupon" />
+            <label for="noCoupon">No, coupon who?</label><br />
+            <button
+              class="coupon-button"
+              type="button"
+              onclick="doYouHaveACoupon()"
+            >
+              Confirm your choice
+              <span class="material-icons"> touch_app </span>
+            </button>
+            <p id="couponAlert" class="promptClose"></p>
+          </form>
+        </section>
+
+        <section class="accordionItem-content">
+          <form>
+            <label for="priceInput">Write the price of your product:</label>
+            <section class="main-input">
+              <div class="main-input-container">
+                <input id="priceInput" type="number" placeholder="0" /><br />
+              </div>
+            </section>
+            <label for="discountInput" id="couponOrDiscount">
+              Write the discount on your product:
+            </label>
+            <section class="main-input discount">
+              <div class="main-input-container">
+                <input id="discountInput" type="number" placeholder="0" /><br />
+              </div>
+              <button
+                class="coupon-discount"
+                type="button"
+                onclick="priceDiscounted()"
+              >
+                Get price with discount
+                <span class="material-icons"> touch_app </span>
+              </button>
+              <p id="resultPrice" class="promptClose"></p>
+            </section>
+          </form>
         </section>
       </section>
       <section class="accordionItem close">

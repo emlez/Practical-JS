@@ -244,3 +244,109 @@ function priceDiscounted() {
     resultPrice.innerText = "Enter a valid price and discount";
   }
 }
+
+//
+// JS for Mean, Median & Mode Calc
+//
+
+// Arithmetic Mean
+function mean() {
+  // Get set of numbers given by user
+  let listGiven = document.getElementById("listGiven");
+  listGiven = listGiven.value;
+
+  // Paragraph to display discount to the user.
+  let meanResult = document.getElementById("mean");
+  meanResult.className = "promptOpen";
+
+  if (listGiven) {
+    let list = listGiven.split(",").map(Number);
+
+    let sumList = list.reduce(function (accumulatedValue = 0, newElement) {
+      return accumulatedValue + newElement;
+    });
+    let meanList = sumList / list.length;
+    meanResult.innerText = `The mean of those numbers is: ${meanList.toFixed(
+      2
+    )}`;
+  } else {
+    meanResult.innerText = "Please input a set of numbers.";
+  }
+}
+
+// Median
+function getMedian() {
+  // Get set of numbers given by user
+  let listGiven = document.getElementById("listGiven");
+  listGiven = listGiven.value;
+
+  // Paragraph to display discount to the user.
+  let medianResult = document.getElementById("median");
+  medianResult.className = "promptOpen";
+
+  // Convert string into array.
+  let list = listGiven.split(",").map(Number);
+
+  // Function to calculate mean
+  function calculateAritmethicMean(number) {
+    const sumList = number.reduce(function (accumulatedValue = 0, newElement) {
+      return accumulatedValue + newElement;
+    });
+
+    const meanList = sumList / number.length;
+    return meanList;
+  }
+
+  // Function needed to sort numbers correctly
+  function compareNumbers(a, b) {
+    return a - b;
+  }
+
+  if (listGiven) {
+    function calculateMedian(list) {
+      const halfList = parseInt(list.length / 2);
+
+      // Sort Method
+      list.sort(compareNumbers);
+
+      // Checks if list is even or odd
+      if (list.length % 2 === 0) {
+        const elem1 = list[halfList - 1];
+        const elem2 = list[halfList];
+        const elem1and2 = calculateAritmethicMean([elem1, elem2]);
+        // return (median = elem1and2);
+        let median = elem1and2;
+        medianResult.innerText = `The median of those numbers is: ${median.toFixed(
+          2
+        )}`;
+      } else {
+        // return (median = list[halfList]);
+        let median = list[halfList];
+        medianResult.innerText = `The median of those numbers is: ${median.toFixed(
+          2
+        )}`;
+      }
+    }
+
+    calculateMedian(list);
+  } else {
+    medianResult.innerText = "Please input a set of numbers.";
+  }
+}
+
+// Mode
+function mode(list) {
+  const listCount = {};
+
+  // Creates an object that counted the repetitions of a number in the original array
+  list.map(function (elem) {
+    listCount[elem] ? (listCount[elem] += 1) : (listCount[elem] = 1);
+  });
+  // Transforms the object into an array and sorts it in ascending order
+  const listArray = Object.entries(listCount).sort(function (a, b) {
+    return a[1] - b[1];
+  });
+  // Selects the last item in the array, since it's the mode
+  const mode = listArray[listArray.length - 1];
+  return mode;
+}

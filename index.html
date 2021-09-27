@@ -241,17 +241,38 @@
       </section>
       <section class="accordionItem close">
         <h2 class="accordionItem-heading">
-          <span class="material-icons">quiz</span>
-          Next Challenge
+          <span class="material-icons">calculate</span>
+          Mean, Median <br />
+          & Mode
           <span class="material-icons">expand_more</span>
         </h2>
         <section class="accordionItem-content">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque,
-            aspernatur quis laborum laboriosam nulla iusto eligendi incidunt
-            voluptas similique debitis, fuga sunt dicta facilis repudiandae.
-            Fugiat adipisci dignissimos delectus ducimus?
-          </p>
+          <h3>Calculate the mean, median & mode from a set of numbers</h3>
+          <form>
+            <label for="listGiven"
+              >Write your set of numbers separated by a comma</label
+            ><br />
+            <section class="main-input">
+              <div class="main-input-container">
+                <input type="text" id="listGiven" placeholder="0,1,2..." />
+              </div>
+            </section>
+            <button class="mean-button" type="button" onclick="mean()">
+              Get mean
+              <span class="material-icons"> touch_app </span>
+            </button>
+            <p id="mean" class="promptClose"></p>
+            <button class="median-button" type="button" onclick="getMedian()">
+              Get median
+              <span class="material-icons"> touch_app </span>
+            </button>
+            <p id="median" class="promptClose"></p>
+            <button class="mode-button" type="button" onclick="mode()">
+              Get mode
+              <span class="material-icons"> touch_app </span>
+            </button>
+            <p id="mode" class="promptClose"></p>
+          </form>
         </section>
       </section>
       <section class="accordionItem close">
@@ -269,7 +290,6 @@
           </p>
         </section>
       </section>
-      <!-- </div> -->
     </main>
     <footer>
       <p class="attributionSection">

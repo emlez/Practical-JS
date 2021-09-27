@@ -35,6 +35,7 @@ function triangleArea(base, height) {
   return (base * height) / 2;
 }
 // Code for Isoceles Triangle
+// TODO: Make it work within the webapp.
 // function isocelesTriangleHeight(side1, side2, base) {
 //   if (side1 === side2 && side1 != base) {
 //     const height = Math.sqrt(side1 * side1 - (base / 2) * (base / 2));
@@ -266,7 +267,7 @@ function mean() {
       return accumulatedValue + newElement;
     });
     let meanList = sumList / list.length;
-    meanResult.innerText = `The mean of those numbers is: ${meanList.toFixed(
+    meanResult.innerText = `The arithmetic mean of those numbers is: ${meanList.toFixed(
       2
     )}`;
   } else {
@@ -316,15 +317,11 @@ function getMedian() {
         const elem1and2 = calculateAritmethicMean([elem1, elem2]);
         // return (median = elem1and2);
         let median = elem1and2;
-        medianResult.innerText = `The median of those numbers is: ${median.toFixed(
-          2
-        )}`;
+        medianResult.innerText = `The median of those numbers is: ${median}`;
       } else {
         // return (median = list[halfList]);
         let median = list[halfList];
-        medianResult.innerText = `The median of those numbers is: ${median.toFixed(
-          2
-        )}`;
+        medianResult.innerText = `The median of those numbers is: ${median}`;
       }
     }
 
@@ -335,18 +332,38 @@ function getMedian() {
 }
 
 // Mode
-function mode(list) {
-  const listCount = {};
+// TODO: Make it work with webapp.
+function getMode() {
+  // Get set of numbers given by user
+  let listGiven = document.getElementById("listGiven");
+  listGiven = listGiven.value;
 
-  // Creates an object that counted the repetitions of a number in the original array
-  list.map(function (elem) {
-    listCount[elem] ? (listCount[elem] += 1) : (listCount[elem] = 1);
-  });
-  // Transforms the object into an array and sorts it in ascending order
-  const listArray = Object.entries(listCount).sort(function (a, b) {
-    return a[1] - b[1];
-  });
-  // Selects the last item in the array, since it's the mode
-  const mode = listArray[listArray.length - 1];
-  return mode;
+  // Paragraph to display discount to the user.
+  let modeResult = document.getElementById("mode");
+  modeResult.className = "promptOpen";
+
+  // Convert string into array.
+  let list = listGiven.split(",").map(Number);
+
+  function mode(list) {
+    const listCount = {};
+
+    // Creates an object that counted the repetitions of a number in the original array
+    list.map(function (elem) {
+      listCount[elem] ? (listCount[elem] += 1) : (listCount[elem] = 1);
+    });
+    // Transforms the object into an array and sorts it in ascending order
+    const listArray = Object.entries(listCount).sort(function (a, b) {
+      return a[1] - b[1];
+    });
+    // Selects the last item in the array, since it's the mode
+    const mode = listArray[listArray.length - 1];
+    modeResult.innerText = `The mode of those numbers is: ${mode[0]}, since it repeats ${mode[1]} times.`;
+  }
+
+  if (listGiven) {
+    mode(list);
+  } else {
+    modeResult.innerText = "Please input a set of numbers.";
+  }
 }
